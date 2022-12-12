@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-12 text-center">Writers List</div>
+</div>
+
+<div class="row">
+  <table class="table">
+    <thead>
+      <th>Title</th>
+      <th>Author</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let a of writers">
+        <td>{{ a.title }}</td>
+        <td>{{ a.author }}</td>
+        <td>
+          <a href="edit-writer/{{ a._id }}" class="btn btn-success">EDIT</a>
+          |<button (click)="delWriter(a)" class="btn btn-danger">DELETE</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
